@@ -4,7 +4,7 @@ from src.utils import get_greeting, get_top_transactions, process_cards
 
 
 def test_process_cards(sample_df):
-    """Тест на работоспособность функции маскировки карт. """
+    """Тест на работоспособность функции маскировки карт."""
     result = process_cards(sample_df)
     assert isinstance(result, list)
     assert all("last_digits" in card and "total_spent" in card and "cashback" in card for card in result)
@@ -12,7 +12,7 @@ def test_process_cards(sample_df):
 
 
 def test_get_top_transactions(sample_df):
-    """Тест на работоспособность функции возвращения топ транзакций. """
+    """Тест на работоспособность функции возвращения топ транзакций."""
     top = get_top_transactions(sample_df)
     assert len(top) <= 5
     assert top[0]["amount"] == 2000
