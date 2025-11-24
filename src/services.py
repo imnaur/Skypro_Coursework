@@ -28,7 +28,7 @@ json_logger.addHandler(file_handler)
 
 
 def profitable_categories(data: pd.DataFrame, year: int, month: int) -> dict:
-    """"""
+    """Функция анализирует выгодные категории кэшбэков и возвращает их сумму."""
     json_logger.info(f"Запуск анализа кэшбэка за {month}/{year}")
     data["Дата операции"] = pd.to_datetime(data["Дата операции"], format="%d.%m.%Y %H:%M:%S", errors="coerce")
     df_filtered = data[
