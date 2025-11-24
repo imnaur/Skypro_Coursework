@@ -7,6 +7,7 @@ from src.services import profitable_categories
 
 
 def test_profitable_categories_mock(sample_data):
+    """Тест проверяет работоспособность функции на выгодные кэшбэки."""
     # Сохраняем оригинальные функции
     original_to_datetime = pd.to_datetime
     original_to_numeric = pd.to_numeric

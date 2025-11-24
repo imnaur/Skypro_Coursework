@@ -5,6 +5,7 @@ from src.services import profitable_categories
 
 
 def test_profitable_categories_mock(sample_data):
+    """Тест проверяет работоспособность функции на выгодные кэшбэки (моки)."""
     # Мокаем json_logger, чтобы не писать логи
     with patch("src.services.json_logger") as mock_logger:
         mock_logger.info = MagicMock()
